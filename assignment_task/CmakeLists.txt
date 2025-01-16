@@ -1,0 +1,29 @@
+cmake_minimum_required(VERSION 3.10)
+project(MyCppProject)
+
+# Set C++ standard
+set(CMAKE_CXX_STANDARD 17)
+
+# Include directories
+include_directories(${CMAKE_SOURCE_DIR}/include)
+find_package(CURL CONFIG REQUIRED)
+
+# Find and link nlohmann/json
+find_package(nlohmann_json CONFIG REQUIRED)
+
+# find_package(websocketpp CONFIG REQUIRED)
+# find_package(Boost REQUIRED COMPONENTS random system asio)
+add_executable(MyCppProjectExecutable
+    src/main.cpp
+    src/Deribit.cpp
+)
+
+target_link_libraries(MyCppProjectExecutable PRIVATE nlohmann_json::nlohmann_json)
+target_link_libraries(MyCppProjectExecutable PRIVATE CURL::libcurl)
+
+# target_link_libraries(MyCppProjectExecutable PRIVATE websocketpp::websocketpp)
+# target_link_libraries(MyCppProjectExecutable PRIVATE Boost::asio Boost::system )
+
+# target_include_directories(MyCppProjectExecutable PRIVATE ${websocketpp_INCLUDE_DIRS})
+
+# Add source files

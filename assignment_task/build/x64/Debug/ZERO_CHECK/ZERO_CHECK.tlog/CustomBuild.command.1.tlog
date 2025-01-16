@@ -1,0 +1,10 @@
+^D:\GOQUANT\ASSIGNMENT_TASK\BUILD\CMAKEFILES\23E2406D8769924495791B2B9F4140C1\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Sample_Project/small_project -BD:/GoQuant/assignment_task/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/GoQuant/assignment_task/build/MyCppProject.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
