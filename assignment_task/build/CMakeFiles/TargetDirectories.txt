@@ -1,0 +1,3 @@
+D:/GoQuant/assignment_task/build/CMakeFiles/MyCppProjectExecutable.dir
+D:/GoQuant/assignment_task/build/CMakeFiles/ALL_BUILD.dir
+D:/GoQuant/assignment_task/build/CMakeFiles/ZERO_CHECK.dir
